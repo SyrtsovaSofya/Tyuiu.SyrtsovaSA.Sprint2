@@ -1,55 +1,56 @@
-using tyuiu.cources.programming.interfaces.Sprint2; 
- 
-namespace Tyuiu.SyrtsovaSA.Sprint2.Task5.V7.Lib;
+п»їusing tyuiu.cources.programming.interfaces.Sprint2;
 
-public class DataService : ISprint2Task5V7
+namespace Tyuiu.SyrtsovaSA.Sprint2.Task5.V7.Lib
 {
-    public string FindMonthName(int startYear, int n)
+    public class DataService : ISprint2Task5V7
     {
-        DateOnly date = new DateOnly(startYear, 1, 1);
-        date = date.AddMonths(n).AddDays(2);
-        string res;
-        switch (date.Month)
+        public string FindMonthName(int startYear, int n)
         {
-            case 1:
-                res = "январь";
-                break;
-            case 2:
-                res = "февраль";
-                break;
-            case 3:
-                res = "март";
-                break;
-            case 4:
-                res = "апрель";
-                break;
-            case 5:
-                res = "май";
-                break;
-            case 6:
-                res = "июнь";
-                break;
-            case 7:
-                res = "июль";
-                break;
-            case 8:
-                res = "август";
-                break;
-            case 9:
-                res = "сентябрь";
-                break;
-            case 10:
-                res = "октябрь";
-                break;
-            case 11:
-                res = "ноябрь";
-                break;
-            case 12:
-                res = "декабрь";
-                break;
-            default:
-                throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {date.Month}.");
+            DateOnly date = new DateOnly(startYear, 1, 1);
+            date = date.AddMonths(n).AddDays(2);
+            string res;
+            switch (date.Month)
+            {
+                case 1:
+                    res = "СЏРЅРІР°СЂСЊ";
+                    break;
+                case 2:
+                    res = "С„РµРІСЂР°Р»СЊ";
+                    break;
+                case 3:
+                    res = "РјР°СЂС‚";
+                    break;
+                case 4:
+                    res = "Р°РїСЂРµР»СЊ";
+                    break;
+                case 5:
+                    res = "РјР°Р№";
+                    break;
+                case 6:
+                    res = "РёСЋРЅСЊ";
+                    break;
+                case 7:
+                    res = "РёСЋР»СЊ";
+                    break;
+                case 8:
+                    res = "Р°РІРіСѓСЃС‚";
+                    break;
+                case 9:
+                    res = "СЃРµРЅС‚СЏР±СЂСЊ";
+                    break;
+                case 10:
+                    res = "РѕРєС‚СЏР±СЂСЊ";
+                    break;
+                case 11:
+                    res = "РЅРѕСЏР±СЂСЊ";
+                    break;
+                case 12:
+                    res = "РґРµРєР°Р±СЂСЊ";
+                    break;
+                default:
+                    throw new ArgumentException($"РњРµСЃСЏС† РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РѕС‚ 1 РґРѕ 12. Р—РЅР°С‡РµРЅРёРµ {date.Month}.");
+            }
+            return res;
         }
-        return res;
     }
-} 
+}
